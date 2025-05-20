@@ -1,10 +1,23 @@
-import { FiUsers, FiActivity, FiBox, FiDollarSign } from 'react-icons/fi';
+import { FiUsers, FiActivity, FiBox, FiDollarSign } from "react-icons/fi";
+import SearchBox from "@/components/search/SearchBox";
 
 const stats = [
-  { id: 1, name: 'Total Users', value: '1,234', icon: FiUsers, trend: '+12%' },
-  { id: 2, name: 'Active Sessions', value: '456', icon: FiActivity, trend: '+5%' },
-  { id: 3, name: 'Products', value: '789', icon: FiBox, trend: '+8%' },
-  { id: 4, name: 'Revenue', value: '$12,345', icon: FiDollarSign, trend: '+15%' },
+  { id: 1, name: "Total Users", value: "1,234", icon: FiUsers, trend: "+12%" },
+  {
+    id: 2,
+    name: "Active Sessions",
+    value: "456",
+    icon: FiActivity,
+    trend: "+5%",
+  },
+  { id: 3, name: "Products", value: "789", icon: FiBox, trend: "+8%" },
+  {
+    id: 4,
+    name: "Revenue",
+    value: "$12,345",
+    icon: FiDollarSign,
+    trend: "+15%",
+  },
 ];
 
 export default function Dashboard() {
@@ -27,7 +40,9 @@ export default function Dashboard() {
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-600">{stat.name}</p>
+                  <p className="text-sm font-medium text-gray-600">
+                    {stat.name}
+                  </p>
                   <p className="text-2xl font-semibold text-gray-900">
                     {stat.value}
                   </p>
@@ -40,7 +55,9 @@ export default function Dashboard() {
                 <span className="text-green-500 text-sm font-medium">
                   {stat.trend}
                 </span>
-                <span className="text-gray-600 text-sm ml-2">vs last month</span>
+                <span className="text-gray-600 text-sm ml-2">
+                  vs last month
+                </span>
               </div>
             </div>
           );
@@ -75,6 +92,9 @@ export default function Dashboard() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="p-4">
+        <SearchBox />
       </div>
     </div>
   );
