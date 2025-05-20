@@ -11,7 +11,7 @@ export async function GET(request: Request) {
 
   try {
     // Perform case-insensitive search across multiple fields
-    const results = await prisma.User.findMany({
+    const results = await prisma.user.findMany({
       where: {
         OR: [
           {
