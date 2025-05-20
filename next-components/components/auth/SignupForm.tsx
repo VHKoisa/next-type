@@ -2,12 +2,7 @@
 import React from "react";
 import { Label } from "@/components/auth/Label";
 import { Input } from "@/components/auth/Input";
-import { cn } from "@/lib/utils";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
+import { cn } from "@/lib/utils"; 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
