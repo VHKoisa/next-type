@@ -95,7 +95,7 @@ export default function LoginForm() {
         </button>
 
         <div className="mt-4 text-center text-sm text-neutral-600 dark:text-neutral-400">
-          Don't have an account?{' '}
+          Don&apos;t have an account?{' '}
           <Link 
             href="/auth/signup" 
             className="font-semibold text-neutral-800 hover:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-100"
