@@ -1,18 +1,20 @@
-generator client {
-  provider = "prisma-client-js"
-}
-
+// Define database connection via the `DATABASE_URL` env var
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
+// Define custom output path for generated Prisma Client
+generator client {
+  provider = "prisma-client-js"
+  output   = "/app/generated/prisma-client"
+}
+
+// Example data model
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  password  String
-  name      String?
+  id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  @@index([name]) // Add index for better search performance
+  email     String   @unique
+  name      String?
+  @@index([name])
 }
